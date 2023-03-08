@@ -1,8 +1,13 @@
-let grid = '';
-for (let i = 0; i < 64; i++) {
-  if (i > 0) {
-    if (i % 8 == 0) grid = grid + '\n';
+let size = 8;
+let board = "";
+for (let i = 0; i < size; i++) {
+  for (let j = 0; j < size; j++) {
+    if ((i + j) % 2 == 0) {
+      board += ' ';
+    } else {
+      board += '#';
+    }
   }
-  grid += 's';
+  board += '\n';
 }
-console.log(grid);
+console.log(board);
